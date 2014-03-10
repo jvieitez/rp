@@ -1,0 +1,14 @@
+<! doctype html>
+<title> Hello 2 from Flask!</title>
+
+	<!-- for loop looping through number of entries in db -->
+<ul>
+	{% set count = 1 %}
+	{% for email in user %}
+		<li> {{user.get(count).username}} - {{ user.get(count).email }}!</li>
+		{% set count = count + 1 %}
+	{% endfor %}
+</ul>
+
+
+
