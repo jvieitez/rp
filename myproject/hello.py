@@ -63,6 +63,14 @@ def myuserset():
 def users_template():
 	return render_template('users_template.html', user=User.query, x=0)
 
+@app.route('/robot/go/<length>')
+def picaxe_line(length=None):
+	return render_template('picaxe.html', length=length)	
+
+@app.route('/robot/square/<size>')
+def picaxe_square(size=None):
+	return render_template('picaxe_square.html', size=size)	
+
 	
 if __name__ == '__main__':
     app.run(debug=True)
